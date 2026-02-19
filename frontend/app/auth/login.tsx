@@ -29,7 +29,6 @@ export default function Login() {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View className="flex-1 px-8 pt-4">
             
-            {/* Back Button */}
             <TouchableOpacity 
               onPress={() => router.back()} 
               className="w-10 h-10 bg-gray-100 rounded-xl items-center justify-center mb-6"
@@ -45,24 +44,22 @@ export default function Login() {
 
             <Animated.View entering={FadeInDown.duration(1000).springify()} className="space-y-4">
               
-              {/* Email Input */}
-              <View className="space-y-2">
+              <View className="space-y-2 mb-2">
                 <TextInput 
                   placeholder="Enter your email" 
                   placeholderTextColor="#9ca3af"
                   keyboardType="email-address"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 font-medium text-base focus:border-gray-900 focus:bg-white"
+                  className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-4 text-gray-900 font-medium text-base focus:border-gray-900 focus:bg-white"
                 />
               </View>
 
-              {/* Password Input */}
               <View className="space-y-2">
                 <View className="relative w-full">
                   <TextInput 
                     placeholder="Enter your password" 
                     placeholderTextColor="#9ca3af"
                     secureTextEntry={!showPassword}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 font-medium text-base focus:border-gray-900 focus:bg-white pr-12"
+                    className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-4 text-gray-900 font-medium text-base focus:border-gray-900 focus:bg-white pr-12"
                   />
                   <Pressable 
                     onPress={() => setShowPassword(!showPassword)}
@@ -78,7 +75,7 @@ export default function Login() {
               </View>
 
               <TouchableOpacity className="items-end">
-                <Link href="/auth/forgot">
+                <Link href="/auth/forgot" className='mt-1 mb-1'>
                   <Text className="text-gray-500 font-medium">Forgot Password?</Text>
                 </Link>
               </TouchableOpacity>
@@ -87,14 +84,12 @@ export default function Login() {
                 <Text className="text-white font-bold text-lg">Login</Text>
               </TouchableOpacity>
 
-              {/* Divider */}
               <View className="flex-row items-center my-8">
                 <View className="flex-1 h-[1px] bg-gray-200" />
                 <Text className="mx-4 text-gray-400 font-medium">Or Login with</Text>
                 <View className="flex-1 h-[1px] bg-gray-200" />
               </View>
 
-              {/* Social Login Buttons */}
               <View className="flex-row justify-center gap-6 mt-2">
                 <TouchableOpacity className="bg-white border border-gray-200 p-4 rounded-xl items-center active:bg-gray-50 shadow-sm w-20 h-20 justify-center">
                    <Image 

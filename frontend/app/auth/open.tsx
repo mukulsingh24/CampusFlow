@@ -44,6 +44,13 @@ export default function Open() {
           >
             <Text className="text-white font-bold text-lg">Register</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity 
+            className="w-full bg-indigo-600 border border-indigo-600 py-4 rounded-xl items-center active:bg-indigo-700"
+            onPress={() => router.push('/features/expense')}
+          >
+            <Text className="text-white font-bold text-lg">Expense Tracker</Text>
+          </TouchableOpacity>
         </Animated.View>
       </View>
       </View>
